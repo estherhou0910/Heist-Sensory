@@ -117,3 +117,5 @@ class BehavioralHealthPredictor:
         X = pd.DataFrame(self.imputer.transform(X[self.feature_names]), columns=self.feature_names)
         preds = {outcome: float(self.models[outcome].predict(self.scalers[outcome].transform(X))[0]) for outcome in self.models}
         return preds
+    if __name__ == "__main__":
+        print("✅ new_model.py ran successfully")

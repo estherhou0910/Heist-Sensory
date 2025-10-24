@@ -2,6 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
+import sys
+import os
+
+# Ensure models module is in path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'models')))
 
 # ---------- Page & style ----------
 st.set_page_config(page_title="Sensory AI", page_icon="🫧", layout="wide")
@@ -19,9 +24,16 @@ st.caption("Live AI predictions (1–5 scale) + MBTI-aware weekly action plans t
 
 # ---------- Load model ----------
 try:
-    with open("trained_model.pkl", "rb") as f:
+    with open("models/trained_model.pkl", "rb") as f:
         bundle = pickle.load(f)
-    model = bundle["model"]
+
+    try:
+        # newer version with predictor object
+        predictor = bundle["predictor"]
+        model = predictor.models["multioutput"]
+    except KeyError:
+        # fallback if only model key exists (older saves)
+        model = bundle["model"]
     FEATURE_COLUMNS = bundle["feature_columns"]
     NUMERIC_FEATURES = bundle["numeric_features"]
     CATEGORICAL_FEATURES = bundle["categorical_features"]  # ['mbti_type']
@@ -254,13 +266,13 @@ st.markdown("### 🎨 Figma-Inspired UI Mockups")
 tab1, tab2, tab3, tab4 = st.tabs(["Sensory Vision", "Home", "🧭 Action Plan", "Weekly Summary"])
 
 with tab1:
-    st.image("images/startpage.png", caption="Sensory Start Page", use_container_width=True)
+    st.image("UI/images/startpage.png", caption="Sensory Start Page", use_container_width=True)
 
 with tab2:
-    st.image("images/ui_home.png", caption="Home Screen — Overview and Stress Insights", use_container_width=True)
+    st.image("UI/images/ui_home.png", caption="Home Screen — Overview and Stress Insights", use_container_width=True)
 
 with tab3:
-    st.image("images/ui_actionplan.png", caption="Weekly Action Plan — Personalized Tasks & Progress Tracker", use_container_width=True)
+    st.image("UI/images/ui_actionplan.png", caption="Weekly Action Plan — Personalized Tasks & Progress Tracker", use_container_width=True)
 
 with tab4:
-    st.image("images/ui_weekly_summary.png", caption="Weekly Progress Summary — Trend Analysis Weekly Review & Achievment Progress", use_container_width=True)
+    st.image("UI/images/ui_weekly_summary.png", caption="Weekly Progress Summary — Trend Analysis Weekly Review & Achievment Progress", use_container_width=True)
