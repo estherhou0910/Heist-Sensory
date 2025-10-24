@@ -2,7 +2,7 @@
 
 University of Rohcester 2025 Heist Hackathon 
 Vault Track: MedTech 
-    Proactive, personalized mental-wellness support for college students. Sensory detects, understands, and manages stress through AI-driven insights and adaptive weekly plans built around a student's unique personality and lifestyle.
+Proactive, personalized mental-wellness support for college students. Sensory detects, understands, and manages stress through AI-driven insights and adaptive weekly plans built around a student's unique personality and lifestyle.
 
 ### 🎯 The Challenge: Generalized Wellness Fails Personalized Needs 😔
 College students face an unprecedented stress crisis compounded by generic wellness tools. Standard mental health apps offer one-size-fits-all advice, ignoring a critical factor: individual personality. A high-stress score requires different interventions for different people: an Introvert may need alone time, while an Extrovert may need structured social interaction.
