@@ -32,7 +32,7 @@ Sensory is an AI-powered behavioral health companion that moves mental-wellness 
 📊 Visual Progress Dashboard: A clean, intuitive weekly summary to track emotional progress, including Weekly Progress on specific stress time reduction.
 
 🕒 Focus & Recharge Timer: A simple, integrated tool for balancing productivity phases with essential recovery time.
----------------------------------------------------------------------------------------------------------------------------------------------
+
 ## 🧠 How Sensory Works: The Multi-Output Predictive Engine
 Sensory's core is the BehavioralHealthPredictor class, implementing a multi-output regression strategy to provide a holistic risk assessment.
 
@@ -55,7 +55,7 @@ Encoding & Scaling: The categorical mbti_type is label-encoded, and all 30 featu
 Predict & Analyze: The trained XGBoost models analyze 30 distinct features (Sensing, Lifestyle, and Personality) to generate four precise predictions.
 
 Personalize & Recommend: The application logic uses the predicted scores and the user's encoded MBTI profile to generate a tailored, actionable weekly plan that aligns with their unique psychological needs.
----------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Steps to set up locally: 
 1️⃣ Setup Environment
 ```bash
