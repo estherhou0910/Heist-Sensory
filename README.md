@@ -1,7 +1,9 @@
 # 🫧 Sensory: Personality-Driven Behavioral Health AI 🫧
 
 University of Rohcester 2025 Heist Hackathon 
+
 Vault Track: MedTech 
+
 Proactive, personalized mental-wellness support for college students. Sensory detects, understands, and manages stress through AI-driven insights and adaptive weekly plans built around a student's unique personality and lifestyle.
 
 ### 🎯 The Challenge: Generalized Wellness Fails Personalized Needs 😔
