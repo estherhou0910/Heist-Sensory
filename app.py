@@ -6,7 +6,7 @@ import sys
 import os
 
 # Ensure models module is in path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'models')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'models')))
 
 # ---------- Page & style ----------
 st.set_page_config(page_title="Sensory AI", page_icon="🫧", layout="wide")
